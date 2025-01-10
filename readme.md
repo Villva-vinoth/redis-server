@@ -1,49 +1,101 @@
-<!-- Redis -->
-
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redis Commands Overview</title>
+</head>
 <body>
-    <div>
-        Redis is fast, open source and in-memory key - value database server.
-    <div>
-
-     <ul> 
-        <li>
-        STRING ---
-        <dl>
-            <dt>set [key] [value] (NX) (EX 60)</dt>
-            <dd> set the key for a value , (nx is optional, its checking that the key is already exits are not) (ex is optional and it is usefull when you used a cache , 60 means 1 minute) </dd>
-            <dt>mset [key] [value] [key] [value] and so on...</dt>
-            <dd> mset sets the multiple key value pair at once</dd>
-
-            <dt>get [key]</dt>
-            <dd> get the key for a value </dd>
-            <dt>mget [key] [key] and so on...</dt>
-            <dd> mget return the multiple value at once. </dd>
-
-            <dt>getset [key] [value] </dt>
-            <dd>get the value and set the value, its like update the value for existing key ( NOTE : Only used for existing key)</dd>
-
-            <dt>getrange [key] [start as integer] [end as integer] </dt>
-            <dd>its works like substring ! for a specify key!</dd>
-
-            <dt>incr [key]</dt>
-            <dd>its used for increment by key's value by 1</dd>
-
-            <dt>incrby [key] [integer]</dt>
-            <dd>its used for increment by desired value</dd>
-
-            <dt>decr [key]</dt>
-            <dd>its used for decrement the key's value by 1</dd>
-
-            <dt>decrby [key] [integer]</dt>
-            <dd>its used for decrement by desired value </dd>
-
-
-            <dt>del [key] ( [key] and so on....)</dt>
-            <dd>Its used for deletion purpose, can del with single key and provide multi key it deletes.</dd>
-        </dl>
-        </li>
-    </ul>
+    <header>
+        <h1>Redis Commands Overview</h1>
+        <p>Redis is fast, open-source, and an in-memory key-value database server. Below are common Redis commands, especially focused on working with <strong>strings</strong>.</p>
+    </header>
+    <section>
+        <h2>String Commands</h2>
+        <ul>
+            <li>
+                <strong>SET [key] [value] (NX) (EX 60)</strong>
+                <dl>
+                    <dt>Description:</dt>
+                    <dd>Sets a key for a value.</dd>
+                    <dt>Optional Flags:</dt>
+                    <dd><strong>NX</strong> - Ensures the key does not exist. If it exists, the command does nothing.</dd>
+                    <dd><strong>EX 60</strong> - Sets an expiration time for the key (60 seconds = 1 minute).</dd>
+                </dl>
+            </li>
+            <li>
+                <strong>MSET [key] [value] [key] [value] ...</strong>
+                <dl>
+                    <dt>Description:</dt>
+                    <dd>Sets multiple key-value pairs at once.</dd>
+                </dl>
+            </li>
+            <li>
+                <strong>GET [key]</strong>
+                <dl>
+                    <dt>Description:</dt>
+                    <dd>Retrieves the value for a given key.</dd>
+                </dl>
+            </li>
+            <li>
+                <strong>MGET [key] [key] ...</strong>
+                <dl>
+                    <dt>Description:</dt>
+                    <dd>Retrieves the values for multiple keys at once.</dd>
+                </dl>
+            </li>
+            <li>
+                <strong>GETSET [key] [value]</strong>
+                <dl>
+                    <dt>Description:</dt>
+                    <dd>Retrieves the value for a key and sets the new value. It updates the value for an existing key.</dd>
+                    <dt>Note:</dt>
+                    <dd>This command only works for existing keys.</dd>
+                </dl>
+            </li>
+            <li>
+                <strong>GETRANGE [key] [start] [end]</strong>
+                <dl>
+                    <dt>Description:</dt>
+                    <dd>Retrieves a substring of the value for the specified key. The <strong>start</strong> and <strong>end</strong> are integers defining the range.</dd>
+                </dl>
+            </li>
+            <li>
+                <strong>INCR [key]</strong>
+                <dl>
+                    <dt>Description:</dt>
+                    <dd>Increments the value of the key by 1.</dd>
+                </dl>
+            </li>
+            <li>
+                <strong>INCRBY [key] [integer]</strong>
+                <dl>
+                    <dt>Description:</dt>
+                    <dd>Increments the value of the key by a specified integer.</dd>
+                </dl>
+            </li>
+            <li>
+                <strong>DECR [key]</strong>
+                <dl>
+                    <dt>Description:</dt>
+                    <dd>Decrements the value of the key by 1.</dd>
+                </dl>
+            </li>
+            <li>
+                <strong>DECRBY [key] [integer]</strong>
+                <dl>
+                    <dt>Description:</dt>
+                    <dd>Decrements the value of the key by a specified integer.</dd>
+                </dl>
+            </li>
+            <li>
+                <strong>DEL [key] [key] ...</strong>
+                <dl>
+                    <dt>Description:</dt>
+                    <dd>Deletes one or more keys.</dd>
+                </dl>
+            </li>
+        </ul>
+    </section>
 </body>
 </html>
