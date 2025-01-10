@@ -1,8 +1,7 @@
 const express = require('express');
 const { initializeRedis, client } = require('./config/redis.config');
-
+const stringRouter = require('./api/string');
 const app = express();
-
 
 app.use(express.json());
 
@@ -46,10 +45,7 @@ app.get('/', async (req, res) => {
     });
 })
 
-
-
-
-
+app.use('/string', stringRouter);
 
 app.listen(4000, () => {
     console.log('Server is running on port 4000');
