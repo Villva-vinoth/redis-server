@@ -11,6 +11,8 @@
     </header>
     <section>
     <a href="https://github.com/Villva-vinoth/redis-server/blob/master/string.md"> Strings </a>
+    <a href="https://github.com/Villva-vinoth/redis-server/blob/master/hashes.md"> Hashes </a>
+
     </section>
 </body>
 </html>
