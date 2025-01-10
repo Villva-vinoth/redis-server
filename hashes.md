@@ -54,11 +54,25 @@
                     <dd>hexpire will expire the field in the given time !</dd>
                 </dl>
             </li>
+            <li>
+                <strong>HPERSIST [key] FIELDS [total fields as numbers] [field key] [field key]</strong>
+                <dl>
+                    <dt>Description :</dt>
+                    <dd>Revoke the expiration back</dd>
+                </dl>
+            </li>
              <li>
                 <strong>HKEYS [key]</strong>
                 <dl>
                     <dt>Description :</dt>
                     <dd>hkeys get the all field key's</dd>
+                </dl>
+            </li>
+             <li>
+                <strong>HVALS [key]</strong>
+                <dl>
+                    <dt>Description :</dt>
+                    <dd>hvals get the all field values</dd>
                 </dl>
             </li>
             <li>
